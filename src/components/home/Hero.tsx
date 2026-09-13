@@ -41,14 +41,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mb-8 mt-[96px] flex justify-center sm:mb-10"
         >
-          <a
-            href={SITE_CONFIG.memorialProfile}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-memorial-red/20 bg-memorial-red/5 px-4 py-1.5 text-sm font-medium text-memorial-red transition-colors hover:border-memorial-red/40 hover:bg-memorial-red/10"
-          >
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald/20 bg-emerald/5 px-4 py-1.5 text-sm font-medium text-emerald">
             {t("badge")}
-          </a>
+          </div>
         </motion.div>
 
         <div className="relative z-10 grid items-center gap-12 lg:grid-cols-2">
@@ -75,7 +70,7 @@ export function Hero() {
           >
             <div className="glass-card relative aspect-[4/5] overflow-hidden rounded-3xl">
               <ProfileImage
-                src={GOZDE_IMAGES.heroMemorial}
+                src={GOZDE_IMAGES.hero}
                 alt={site("imageAlt")}
                 fill
                 priority
@@ -90,9 +85,9 @@ export function Hero() {
               <p className="text-2xl font-bold text-emerald">{t("yearsExperience")}</p>
               <p className="text-xs text-navy/60">{t("yearsExperienceLabel")}</p>
             </div>
-            <div className="absolute -right-4 -top-4 rounded-2xl bg-memorial-red p-4 text-white shadow-xl">
-              <p className="text-2xl font-bold">{t("memorialLabel")}</p>
-              <p className="text-xs text-white/80">{t("memorialSub")}</p>
+            <div className="absolute -right-4 -top-4 rounded-2xl bg-emerald p-4 text-white shadow-xl">
+              <p className="text-lg font-bold">{SITE_CONFIG.clinic.name}</p>
+              <p className="text-xs text-white/80">{SITE_CONFIG.clinic.district} / {SITE_CONFIG.clinic.city}</p>
             </div>
           </motion.div>
         </div>
