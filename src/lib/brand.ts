@@ -1,21 +1,22 @@
 export const BRAND = {
-  forestGreen: "#3D5245",
-  champagneGold: "#C5A46D",
+  forestGreen: "#4A5A45",
+  sageGreen: "#A7AE9D",
+  earth: "#C8BBAA",
+  lightGold: "#D4AD47",
   cream: "#FAF8F4",
 } as const;
 
 export const BRAND_IMAGES = {
-  logo: "/brand/logo.png",
-  logoMark: "/brand/logo.png",
-  logoTransparent: "/brand/logo-transparent.png",
-  banner: "/brand/banner.png",
+  logo: "/brand/logo-official.svg",
+  logoMark: "/brand/logo-mark-official.svg",
+  logoTransparent: "/brand/logo-official.svg",
+  banner: "/brand/logo-official.svg",
 } as const;
 
-/** Source dimensions after HD enhancement (2400px wide) */
 export const BRAND_DIMENSIONS = {
-  logo: { width: 2400, height: 1600 },
-  banner: { width: 2400, height: 1600 },
+  logo: { width: 1200, height: 800 },
+  banner: { width: 1200, height: 800 },
 } as const;
 
-/** Next/Image quality for brand assets (avoid soft recompression) */
+/** SVG assets are rendered losslessly; this remains for raster fallbacks. */
 export const BRAND_IMAGE_QUALITY = 100;
