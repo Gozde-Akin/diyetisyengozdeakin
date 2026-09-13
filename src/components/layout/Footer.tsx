@@ -36,20 +36,10 @@ export async function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 font-heading font-semibold">{t("quickLinks")}</h3>
-            <ul className="space-y-2">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-white/60 transition-colors hover:text-white">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-heading font-semibold">{SITE_CONFIG.clinic.name}</h3>
+            <h3 className="mb-4 font-heading font-semibold">
+              <span className="block">Uzman Diyetisyen &amp; Psikolog</span>
+              <span className="block">Gözde Akın Özel Klinik</span>
+            </h3>
             <div className="flex items-start gap-2 text-sm text-white/60">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <div>
