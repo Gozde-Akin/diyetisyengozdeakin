@@ -18,8 +18,8 @@ export const GOZDE_IMAGES = {
   reel5Kural: "/images/gozde/reel-5-basit-kural.jpg",
   /** Instagram Reel: Karnıyarık Otu Tohumu */
   reelKarniyarikOtu: "/images/gozde/reel-karniyarik-otu.jpg",
-  /** Success story: Ekip İşi, Sağlıklı Değişim */
-  successEkipIsi: "/images/gozde/success-ekip-isi.jpg",
+  /** Neutral clinic portrait used for the current success-story presentation. */
+  successEkipIsi: "/images/gozde/gozde-office-portrait.jpg",
 } as const;
 
 export type InstagramReelItem = {
@@ -46,7 +46,7 @@ export const INSTAGRAM_REELS: InstagramReelItem[] = [
     href: "#basari-hikayeleri",
     titleKey: "reel5Title",
     subtitleKey: "reel5Subtitle",
-    imageFit: "contain",
+    imageFit: "cover",
   },
   {
     id: "5-basit-kural",
