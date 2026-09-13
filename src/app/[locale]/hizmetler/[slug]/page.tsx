@@ -46,13 +46,21 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": "Service",
     name: localized.name,
     description: localized.intro,
     provider: {
-      "@type": "Physician",
-      name: "Gözde Akın",
+      "@type": "MedicalBusiness",
+      name: SITE_CONFIG.clinic.name,
       url: SITE_CONFIG.url,
+      telephone: SITE_CONFIG.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: SITE_CONFIG.clinic.streetAddress,
+        addressLocality: SITE_CONFIG.clinic.district,
+        addressRegion: SITE_CONFIG.clinic.city,
+        addressCountry: SITE_CONFIG.clinic.country,
+      },
     },
   };
 
