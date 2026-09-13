@@ -4,12 +4,12 @@
  * then run: npm run portrait:install
  */
 export const GOZDE_IMAGES = {
-  /** Memorial hospital — hero (lab coat) */
-  heroMemorial: "/images/gozde/gozde-memorial-hero.jpg",
-  /** About & online consultation — same professional portrait */
-  profileOffice: "/images/gozde/gozde-memorial-hero.jpg",
+  /** Current private-clinic hero portrait */
+  hero: "/images/gozde/gozde-office-portrait.jpg",
+  /** About & online consultation portrait */
+  profileOffice: "/images/gozde/gozde-office-portrait.jpg",
   /** Profile for schema & about preview */
-  profile: "/images/gozde/gozde-memorial-hero.jpg",
+  profile: "/images/gozde/profile.jpg",
   /** Instagram Reel: Akşam Gelen Tatlı Krizi */
   reelTatliKrizi: "/images/gozde/reel-tatli-krizi.jpg",
   /** Instagram Reel: İnsülin Direnci */
