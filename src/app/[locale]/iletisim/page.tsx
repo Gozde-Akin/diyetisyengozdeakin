@@ -3,15 +3,16 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { ThemedContactRow } from "@/components/ui/ThemedCard";
-import { SITE_CONFIG, HOSPITALS } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 import { getContactTheme } from "@/lib/card-themes";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const MAP_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.0!2d29.07!3d40.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTWVtb3JpYWwgR8O2enRlcGUgSGFzdGFuZXNp!5e0!3m2!1str!2str!4v1";
+const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(
+  SITE_CONFIG.clinic.postalAddress
+)}&output=embed`;
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
@@ -52,21 +53,10 @@ export default async function ContactPage({ params }: Props) {
               <p className="text-sm text-navy/50">{t("workingHours")}</p>
               <p className="font-medium text-navy">{t("workingHoursValue")}</p>
             </ThemedContactRow>
-            {HOSPITALS.map((h) => (
-              <ThemedContactRow key={h.id} theme={getContactTheme("hospital")}>
-                <p className="font-medium text-navy">{h.name}</p>
-                <p className="text-sm text-navy/50">
-                  {h.district}, {h.city}
-                </p>
-              </ThemedContactRow>
-            ))}
-            <ThemedContactRow
-              theme={getContactTheme("memorial")}
-              href={SITE_CONFIG.memorialProfile}
-              external
-            >
-              <p className="font-medium text-navy">{t("memorialProfile")}</p>
-              <p className="text-sm text-navy/50">memorial.com.tr</p>
+            <ThemedContactRow theme={getContactTheme("hospital")}>
+              <p className="font-medium text-navy">{SITE_CONFIG.clinic.name}</p>
+              <p className="text-sm text-navy/50">{SITE_CONFIG.clinic.addressLine1}</p>
+              <p className="text-sm text-navy/50">{SITE_CONFIG.clinic.addressLine2}</p>
             </ThemedContactRow>
             <ThemedContactRow
               theme={getContactTheme("instagram")}
