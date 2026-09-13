@@ -4,10 +4,10 @@ import { SITE_CONFIG } from "@/lib/constants";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     id: "/",
-    name: "Gözde Akın — Uzman Diyetisyen & Psikolog",
-    short_name: "Gözde Akın",
+    name: SITE_CONFIG.clinic.fullName,
+    short_name: "Gözde Akın Klinik",
     description:
-      "Sürdürülebilir beslenme, fonksiyonel tıp ve psikoloji destekli danışmanlık. İstanbul Kadıköy'de özel klinik ve online danışmanlık.",
+      "Uzman Diyetisyen & Psikolog Gözde Akın Özel Klinik. Sürdürülebilir beslenme, fonksiyonel tıp ve psikoloji destekli danışmanlık; İstanbul Kadıköy'de özel klinik ve online danışmanlık.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF8F4",
@@ -30,7 +30,7 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: "1200x630",
         type: "image/png",
         form_factor: "wide",
-        label: SITE_CONFIG.shortName,
+        label: SITE_CONFIG.clinic.fullName,
       },
     ],
     shortcuts: [
