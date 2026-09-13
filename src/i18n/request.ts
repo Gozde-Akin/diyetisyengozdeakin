@@ -1,6 +1,7 @@
 import { getRequestConfig } from "next-intl/server";
 import { routing } from "./routing";
 import { applyClinicMessageOverrides } from "./clinic-messages";
+import { applyCurrentBrandOverrides } from "./current-brand-messages";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
@@ -10,9 +11,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
   }
 
   const messages = (await import(`./messages/${locale}.json`)).default;
+  const clinicMessages = applyClinicMessageOverrides(locale, messages);
+  const currentMessages = applyCurrentBrandOverrides(locale, clinicMessages);
 
   return {
     locale,
-    messages: applyClinicMessageOverrides(locale, messages) as typeof messages,
+    messages: currentMessages as typeof messages,
   };
 });
