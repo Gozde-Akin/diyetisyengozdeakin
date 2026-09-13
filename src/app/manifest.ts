@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Gözde Akın — Uzman Diyetisyen & Psikolog",
     short_name: "Gözde Akın",
     description:
-      "Sürdürülebilir beslenme, fonksiyonel tıp ve psikoloji destekli danışmanlık. Memorial İstanbul.",
+      "Sürdürülebilir beslenme, fonksiyonel tıp ve psikoloji destekli danışmanlık. İstanbul Kadıköy'de özel klinik ve online danışmanlık.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF8F4",
