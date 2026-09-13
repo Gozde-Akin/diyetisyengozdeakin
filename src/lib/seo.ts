@@ -23,27 +23,26 @@ export function getAlternates(path = "") {
   return { canonical: languages[routing.defaultLocale], languages };
 }
 
+const clinicAddress = {
+  "@type": "PostalAddress",
+  streetAddress: SITE_CONFIG.clinic.streetAddress,
+  addressLocality: SITE_CONFIG.clinic.district,
+  addressRegion: SITE_CONFIG.clinic.city,
+  addressCountry: SITE_CONFIG.clinic.country,
+};
+
 export function organizationJsonLd(locale: string) {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: "Gözde Akın",
+    name: SITE_CONFIG.clinic.name,
     alternateName: PHYSICIAN_ALTERNATE_NAMES,
     url: SITE_CONFIG.url,
     email: SITE_CONFIG.email,
     telephone: SITE_CONFIG.phone,
     image: `${SITE_CONFIG.url}/images/gozde/profile.jpg`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "İstanbul",
-      addressCountry: "TR",
-    },
-    sameAs: [
-      SITE_CONFIG.instagram,
-      SITE_CONFIG.linkedin,
-      SITE_CONFIG.memorialProfile,
-      SITE_CONFIG.whatsapp,
-    ],
+    address: clinicAddress,
+    sameAs: [SITE_CONFIG.instagram, SITE_CONFIG.linkedin],
     availableLanguage: LOCALES,
     inLanguage: locale,
   };
@@ -52,33 +51,25 @@ export function organizationJsonLd(locale: string) {
 export function physicianJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Physician",
+    "@type": "Person",
     name: "Gözde Akın",
     alternateName: PHYSICIAN_ALTERNATE_NAMES,
     jobTitle: "Uzman Diyetisyen & Psikolog",
     description:
-      "Fonksiyonel tıp, gebelikte beslenme, PCOS, diyabet ve insülin direnci uzmanı. Memorial Göztepe ve Ataşehir.",
+      "Beslenme ve psikolojiyi birleştiren bilim temelli, kişiselleştirilmiş danışmanlık hizmetleri. Danışanlarını İstanbul Kadıköy'deki özel kliniğinde ve online olarak kabul etmektedir.",
     url: SITE_CONFIG.url,
     email: SITE_CONFIG.email,
     telephone: SITE_CONFIG.phone,
     image: `${SITE_CONFIG.url}/images/gozde/profile.jpg`,
     worksFor: {
-      "@type": "MedicalOrganization",
-      name: "Memorial Sağlık Grubu",
-      url: "https://www.memorial.com.tr",
+      "@type": "MedicalBusiness",
+      name: SITE_CONFIG.clinic.name,
+      url: SITE_CONFIG.url,
+      address: clinicAddress,
     },
-    medicalSpecialty: ["Nutrition", "Psychology", "Functional Medicine"],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "İstanbul",
-      addressCountry: "TR",
-    },
-    sameAs: [
-      SITE_CONFIG.instagram,
-      SITE_CONFIG.linkedin,
-      SITE_CONFIG.memorialProfile,
-      SITE_CONFIG.whatsapp,
-    ],
+    knowsAbout: ["Nutrition", "Psychology", "Functional Medicine"],
+    address: clinicAddress,
+    sameAs: [SITE_CONFIG.instagram, SITE_CONFIG.linkedin],
   };
 }
 
