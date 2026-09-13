@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Gözde Akın logo mark</title>
+  <desc id="desc">Yeşil, adaçayı ve altın renkli Gözde Akın marka sembolü.</desc>
+  <rect width="512" height="512" rx="96" fill="#FAF8F4"/>
+  <g transform="translate(256 248)">
+    <path d="M-110 92C-156 52-169-25-142-87C-117-143-62-177-3-172C21-170 42-163 61-151" fill="none" stroke="#4A5A45" stroke-width="12" stroke-linecap="round"/>
+    <path d="M103-72C114-33 111 17 90 59C73 93 47 120 15 137" fill="none" stroke="#D4AD47" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-11 121C29 94 39 57 30 10C25-19 31-49 54-76" fill="none" stroke="#4A5A45" stroke-width="15" stroke-linecap="round"/>
+    <path d="M-10 27C-48 9-69-21-71-64C-36-49-11-26 2 5C7 14 8 23 7 33C1 32-5 30-10 27Z" fill="#4A5A45"/>
+    <path d="M33 39C57 26 70 5 73-23C49-15 32 0 23 21C20 28 19 34 19 41C24 41 28 40 33 39Z" fill="#C8BBAA"/>
+    <circle cx="41" cy="-95" r="15" fill="#D4AD47"/>
+  </g>
+</svg>
