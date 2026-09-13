@@ -1,15 +1,10 @@
-const CACHE_NAME = "gozde-akin-v3";
+const CACHE_NAME = "gozde-akin-v4";
 
 const PRECACHE_URLS = [
   "/offline.html",
-  "/brand/logo.png",
-  "/brand/banner.png",
-  "/og-image.jpg",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
-  "/icons/apple-touch-icon.png",
+  "/brand/logo-official.svg",
+  "/brand/logo-mark-official.svg",
   "/images/gozde/profile.jpg",
-  "/images/gozde/gozde-memorial-hero.jpg",
   "/images/gozde/gozde-office-portrait.jpg",
 ];
 
