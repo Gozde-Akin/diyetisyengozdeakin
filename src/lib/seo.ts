@@ -35,8 +35,8 @@ export function organizationJsonLd(locale: string) {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: SITE_CONFIG.clinic.name,
-    alternateName: PHYSICIAN_ALTERNATE_NAMES,
+    name: SITE_CONFIG.clinic.fullName,
+    alternateName: [SITE_CONFIG.clinic.name, ...PHYSICIAN_ALTERNATE_NAMES],
     url: SITE_CONFIG.url,
     email: SITE_CONFIG.email,
     telephone: SITE_CONFIG.phone,
@@ -54,7 +54,7 @@ export function physicianJsonLd() {
     "@type": "Person",
     name: "Gözde Akın",
     alternateName: PHYSICIAN_ALTERNATE_NAMES,
-    jobTitle: "Uzman Diyetisyen & Psikolog",
+    jobTitle: SITE_CONFIG.clinic.professionalTitle,
     description:
       "Beslenme ve psikolojiyi birleştiren bilim temelli, kişiselleştirilmiş danışmanlık hizmetleri. Danışanlarını İstanbul Kadıköy'deki özel kliniğinde ve online olarak kabul etmektedir.",
     url: SITE_CONFIG.url,
@@ -63,7 +63,7 @@ export function physicianJsonLd() {
     image: `${SITE_CONFIG.url}/images/gozde/profile.jpg`,
     worksFor: {
       "@type": "MedicalBusiness",
-      name: SITE_CONFIG.clinic.name,
+      name: SITE_CONFIG.clinic.fullName,
       url: SITE_CONFIG.url,
       address: clinicAddress,
     },
@@ -77,8 +77,8 @@ export function websiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Diyetisyen Gözde Akın",
-    alternateName: PHYSICIAN_ALTERNATE_NAMES,
+    name: SITE_CONFIG.clinic.fullName,
+    alternateName: [SITE_CONFIG.clinic.name, ...PHYSICIAN_ALTERNATE_NAMES],
     url: SITE_CONFIG.url,
     inLanguage: LOCALES,
     publisher: {

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { ProfileImage } from "@/components/ui/ProfileImage";
 import { GOZDE_IMAGES } from "@/lib/images";
+import { SITE_CONFIG } from "@/lib/constants";
 import { getAboutStatTheme, type AboutStatKey } from "@/lib/card-themes";
 import { ThemedCard } from "@/components/ui/ThemedCard";
 import { ArrowRight, Award, Brain, Heart, Stethoscope } from "lucide-react";
@@ -42,16 +43,20 @@ export async function AboutPreview() {
               </span>
             ))}
           </div>
-          <div className="mb-4 inline-flex items-center gap-2 text-sm font-medium text-emerald">
-            <Award className="h-4 w-4" />
-            {t("hospital")}
+          <div className="mb-4 inline-flex items-start gap-2 text-sm text-emerald">
+            <Award className="mt-0.5 h-4 w-4 shrink-0" />
+            <div>
+              <p className="font-semibold">{SITE_CONFIG.clinic.professionalTitle}</p>
+              <p className="font-semibold">{SITE_CONFIG.clinic.name}</p>
+              <p className="text-navy/55">{SITE_CONFIG.clinic.district} / {SITE_CONFIG.clinic.city}</p>
+            </div>
           </div>
           <p className="mb-4 text-navy/70">{t("bio1")}</p>
           <p className="mb-4 text-navy/70">{t("bio2")}</p>
           <p className="text-navy/70">{t("bio3")}</p>
           <Link
             href="/hakkimda"
-            className="mt-6 inline-flex items-center gap-2 font-medium text-emerald transition-colors hover:text-emerald/80"
+            className="mt-6 inline-flex items-center gap-2 font-medium text-memorial-red transition-colors hover:text-memorial-red/80"
           >
             {t("readMore")}
             <ArrowRight className="h-4 w-4" />

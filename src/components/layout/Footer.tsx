@@ -21,13 +21,7 @@ export async function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-center text-center">
-            <Logo
-              href="/"
-              size="footer"
-              transparent
-              showName={false}
-              linkClassName="mb-4 inline-flex"
-            />
+            <Logo href="/" size="footer" transparent showName={false} linkClassName="mb-4 inline-flex" />
             <div className="text-sm leading-relaxed text-white/60">
               <p>{t("descriptionLine1")}</p>
               <p className="font-medium text-white/80">{t("descriptionLine2")}</p>
@@ -37,8 +31,8 @@ export async function Footer() {
 
           <div>
             <h3 className="mb-4 font-heading font-semibold">
-              <span className="block">Uzman Diyetisyen &amp; Psikolog</span>
-              <span className="block">Gözde Akın Özel Klinik</span>
+              <span className="block">{SITE_CONFIG.clinic.professionalTitle}</span>
+              <span className="block">{SITE_CONFIG.clinic.name}</span>
             </h3>
             <div className="flex items-start gap-2 text-sm text-white/60">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
@@ -85,12 +79,8 @@ export async function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/40">
           <div className="mb-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-            <Link href="/gizlilik-politikasi" className="transition-colors hover:text-white/70">
-              {t("privacy")}
-            </Link>
-            <Link href="/cerez-politikasi" className="transition-colors hover:text-white/70">
-              {t("cookies")}
-            </Link>
+            <Link href="/gizlilik-politikasi" className="transition-colors hover:text-white/70">{t("privacy")}</Link>
+            <Link href="/cerez-politikasi" className="transition-colors hover:text-white/70">{t("cookies")}</Link>
           </div>
           © {new Date().getFullYear()} {SITE_CONFIG.name}. {t("rights")}
         </div>

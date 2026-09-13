@@ -11,7 +11,7 @@ type Props = {
 };
 
 const MAP_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(
-  SITE_CONFIG.clinic.postalAddress
+  `${SITE_CONFIG.clinic.fullName}, ${SITE_CONFIG.clinic.postalAddress}`
 )}&output=embed`;
 
 export async function generateMetadata({ params }: Props) {
@@ -33,11 +33,7 @@ export default async function ContactPage({ params }: Props) {
       <Section>
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="space-y-4">
-            <ThemedContactRow
-              theme={getContactTheme("whatsapp")}
-              href={SITE_CONFIG.whatsapp}
-              external
-            >
+            <ThemedContactRow theme={getContactTheme("whatsapp")} href={SITE_CONFIG.whatsapp} external>
               <p className="font-medium text-navy">{t("whatsapp")}</p>
               <p className="text-sm text-navy/60">{t("whatsappDesc")}</p>
             </ThemedContactRow>
@@ -54,23 +50,16 @@ export default async function ContactPage({ params }: Props) {
               <p className="font-medium text-navy">{t("workingHoursValue")}</p>
             </ThemedContactRow>
             <ThemedContactRow theme={getContactTheme("hospital")}>
+              <p className="font-medium text-navy">{SITE_CONFIG.clinic.professionalTitle}</p>
               <p className="font-medium text-navy">{SITE_CONFIG.clinic.name}</p>
-              <p className="text-sm text-navy/50">{SITE_CONFIG.clinic.addressLine1}</p>
+              <p className="mt-1 text-sm text-navy/50">{SITE_CONFIG.clinic.addressLine1}</p>
               <p className="text-sm text-navy/50">{SITE_CONFIG.clinic.addressLine2}</p>
             </ThemedContactRow>
-            <ThemedContactRow
-              theme={getContactTheme("instagram")}
-              href={SITE_CONFIG.instagram}
-              external
-            >
+            <ThemedContactRow theme={getContactTheme("instagram")} href={SITE_CONFIG.instagram} external>
               <p className="font-medium text-navy">Instagram</p>
               <p className="text-sm text-navy/50">{SITE_CONFIG.instagramHandle}</p>
             </ThemedContactRow>
-            <ThemedContactRow
-              theme={getContactTheme("linkedin")}
-              href={SITE_CONFIG.linkedin}
-              external
-            >
+            <ThemedContactRow theme={getContactTheme("linkedin")} href={SITE_CONFIG.linkedin} external>
               <p className="font-medium text-navy">LinkedIn</p>
               <p className="text-sm text-navy/50">{t("linkedinDesc")}</p>
             </ThemedContactRow>
@@ -84,10 +73,14 @@ export default async function ContactPage({ params }: Props) {
       </Section>
 
       <Section variant="light">
-        <h2 className="font-heading mb-6 text-2xl font-bold text-navy">{t("mapTitle")}</h2>
+        <div className="mb-6">
+          <p className="font-heading text-lg font-semibold text-navy">{SITE_CONFIG.clinic.professionalTitle}</p>
+          <h2 className="font-heading text-2xl font-bold text-navy">{SITE_CONFIG.clinic.name}</h2>
+          <p className="mt-1 text-sm text-navy/60">{SITE_CONFIG.clinic.postalAddress}</p>
+        </div>
         <div className="overflow-hidden rounded-3xl shadow-lg">
           <iframe
-            title={t("mapTitle")}
+            title={SITE_CONFIG.clinic.fullName}
             src={MAP_EMBED_URL}
             width="100%"
             height="400"

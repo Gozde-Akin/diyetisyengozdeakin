@@ -22,10 +22,7 @@ export function Hero() {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div
-            className="absolute inset-0 -mx-4 rounded-[2rem] sm:-mx-8"
-            aria-hidden
-          >
+          <div className="absolute inset-0 -mx-4 rounded-[2rem] sm:-mx-8" aria-hidden>
             <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F4]/95 via-[#FAF8F4]/55 to-transparent" />
             <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/90 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent via-white/70 to-white" />
@@ -85,9 +82,10 @@ export function Hero() {
               <p className="text-2xl font-bold text-emerald">{t("yearsExperience")}</p>
               <p className="text-xs text-navy/60">{t("yearsExperienceLabel")}</p>
             </div>
-            <div className="absolute -right-4 -top-4 rounded-2xl bg-emerald p-4 text-white shadow-xl">
-              <p className="text-lg font-bold">{SITE_CONFIG.clinic.name}</p>
-              <p className="text-xs text-white/80">{SITE_CONFIG.clinic.district} / {SITE_CONFIG.clinic.city}</p>
+            <div className="absolute -right-4 -top-4 max-w-[240px] rounded-2xl bg-emerald p-4 text-white shadow-xl">
+              <p className="text-sm font-semibold leading-tight">{SITE_CONFIG.clinic.professionalTitle}</p>
+              <p className="mt-1 text-lg font-bold leading-tight">{SITE_CONFIG.clinic.name}</p>
+              <p className="mt-1 text-xs text-white/80">{SITE_CONFIG.clinic.district} / {SITE_CONFIG.clinic.city}</p>
             </div>
           </motion.div>
         </div>

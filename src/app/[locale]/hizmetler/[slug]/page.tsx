@@ -51,7 +51,7 @@ export default async function ServiceDetailPage({ params }: Props) {
     description: localized.intro,
     provider: {
       "@type": "MedicalBusiness",
-      name: SITE_CONFIG.clinic.name,
+      name: SITE_CONFIG.clinic.fullName,
       url: SITE_CONFIG.url,
       telephone: SITE_CONFIG.phone,
       address: {
