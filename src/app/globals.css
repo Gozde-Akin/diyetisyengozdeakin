@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --memorial-red: #C8102E;
-  --emerald: #2D6A4F;
-  --brand-forest: #3D5245;
-  --brand-gold: #C5A46D;
+  --brand-forest: #4A5A45;
+  --brand-sage: #A3B29A;
+  --brand-earth: #C8BBAA;
+  --brand-gold: #D4AD47;
   --brand-cream: #FAF8F4;
-  --navy: #1B2A4A;
-  --gold: #C9A227;
-  --soft-blue: #4A90D9;
-  --light-gray: #F5F7FA;
-  --background: #FFFFFF;
-  --foreground: #1B2A4A;
+  --emerald: #4A5A45;
+  --navy: #26352C;
+  --gold: #D4AD47;
+  --soft-blue: #A3B29A;
+  --light-gray: #F6F2EC;
+  --background: #FFFDF9;
+  --foreground: #26352C;
+  /* Compatibility alias for legacy utility classes; visually this is now the brand gold. */
+  --memorial-red: var(--brand-gold);
 }
 
 @theme inline {
@@ -38,26 +41,26 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 253, 249, 0.86);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 24px rgba(27, 42, 74, 0.06);
+  border: 1px solid rgba(74, 90, 69, 0.08);
+  box-shadow: 0 4px 24px rgba(38, 53, 44, 0.07);
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #F5F7FA 0%, #FFFFFF 50%, #F0F4F8 100%);
+  background: linear-gradient(135deg, #F8F4ED 0%, #FFFDF9 52%, #EFF3EC 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--emerald) 100%);
+  background: linear-gradient(135deg, var(--brand-forest) 0%, var(--brand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .brand-banner-embed {
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 92%, transparent 100%);
 }
 
 .brand-image-crisp {
