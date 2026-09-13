@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1B2A4A" />
+    <meta name="theme-color" content="#4A5A45" />
     <title>Çevrimdışı — Gözde Akın</title>
     <style>
       * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,35 +13,29 @@
         align-items: center;
         justify-content: center;
         font-family: system-ui, sans-serif;
-        background: linear-gradient(160deg, #f5f7fa 0%, #e8ecf2 100%);
-        color: #1b2a4a;
+        background: linear-gradient(160deg, #f8f4ed 0%, #eff3ec 100%);
+        color: #26352c;
         padding: 24px;
         text-align: center;
       }
       .card {
-        max-width: 360px;
-        background: #fff;
+        max-width: 380px;
+        background: #fffdf9;
+        border: 1px solid rgba(74, 90, 69, 0.08);
         border-radius: 24px;
         padding: 32px 24px;
-        box-shadow: 0 20px 60px rgba(27, 42, 74, 0.12);
+        box-shadow: 0 20px 60px rgba(38, 53, 44, 0.10);
       }
       .logo {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
-        background: #c8102e;
-        color: #fff;
-        font-weight: 700;
-        font-size: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 92px;
+        height: 92px;
         margin: 0 auto 16px;
+        display: block;
       }
       h1 { font-size: 1.25rem; margin-bottom: 8px; }
-      p { font-size: 0.95rem; color: #1b2a4a99; line-height: 1.5; margin-bottom: 20px; }
+      p { font-size: 0.95rem; color: rgba(38, 53, 44, 0.65); line-height: 1.5; margin-bottom: 20px; }
       button {
-        background: #2d6a4f;
+        background: #4a5a45;
         color: #fff;
         border: none;
         border-radius: 999px;
@@ -50,11 +44,12 @@
         font-weight: 600;
         cursor: pointer;
       }
+      button:hover { background: #3d4b39; }
     </style>
   </head>
   <body>
     <div class="card">
-      <div class="logo">GA</div>
+      <img class="logo" src="/brand/logo-mark-official.svg" alt="Gözde Akın" />
       <h1>İnternet bağlantısı yok</h1>
       <p>Önbelleğe alınmış sayfaları görüntüleyebilir veya bağlantınızı kontrol edebilirsiniz.</p>
       <button onclick="location.reload()">Yeniden dene</button>
