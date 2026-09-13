@@ -13,6 +13,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: applyClinicMessageOverrides(locale, messages),
+    messages: applyClinicMessageOverrides(locale, messages) as typeof messages,
   };
 });
