@@ -4,15 +4,23 @@ export const SITE_CONFIG = {
   domain: "diyetisyengozdeakin.com",
   url: "https://www.diyetisyengozdeakin.com",
   email: "dytgozdeakin@gmail.com",
-  phone: "+90 (0) 538 935 92 14",
+  phone: "+90 538 935 92 14",
   phoneRaw: "+905389359214",
   whatsapp: "https://wa.me/905389359214",
   instagram: "https://www.instagram.com/diyetisyengozdeakin/",
   instagramHandle: "@diyetisyengozdeakin",
   linkedin:
     "https://www.linkedin.com/in/g%C3%B6zde-akin-3a09a8106?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-  memorialHandle: "@memorialsaglik",
-  memorialProfile: "https://www.memorial.com.tr/doktorlar/gozde-serin",
+  clinic: {
+    name: "Gözde Akın Özel Klinik",
+    addressLine1: "Fikirtepe, Barış Sokak No:1 Kat:14 Daire:162",
+    addressLine2: "Alya Life Residence, Kadıköy / İstanbul",
+    streetAddress: "Barış Sokak No:1 Kat:14 Daire:162, Alya Life Residence",
+    district: "Kadıköy",
+    city: "İstanbul",
+    country: "TR",
+    postalAddress: "Fikirtepe, Barış Sokak No:1 Kat:14 Daire:162, Alya Life Residence, Kadıköy / İstanbul",
+  },
 } as const;
 
 export const YOUTUBE_VIDEOS = [
@@ -45,21 +53,6 @@ export const YOUTUBE_VIDEOS = [
     videoId: "G4CjbyXts-g",
     titleKey: "video5Title",
     format: "video",
-  },
-] as const;
-
-export const HOSPITALS = [
-  {
-    id: "goztepe",
-    name: "Memorial Göztepe Hastanesi",
-    city: "İstanbul",
-    district: "Göztepe",
-  },
-  {
-    id: "atasehir",
-    name: "Memorial Ataşehir Hastanesi",
-    city: "İstanbul",
-    district: "Ataşehir",
   },
 ] as const;
 
