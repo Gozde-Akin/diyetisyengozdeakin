@@ -33,7 +33,7 @@ export function generateStaticParams() {
 
 export function generateViewport(): Viewport {
   return {
-    themeColor: "#3D5245",
+    themeColor: "#4A5A45",
     width: "device-width",
     initialScale: 1,
     viewportFit: "cover",
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   const alternates = getAlternates();
-  const ogImage = `${SITE_CONFIG.url}/og-image.jpg`;
+  const ogImage = `${SITE_CONFIG.url}/opengraph-image`;
   const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
 
   return {
@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: Props) {
           width: 1200,
           height: 630,
           alt: "Gözde Akın — Uzman Diyetisyen & Psikolog",
-          type: "image/jpeg",
+          type: "image/png",
         },
       ],
     },
@@ -87,10 +87,10 @@ export async function generateMetadata({ params }: Props) {
     manifest: "/manifest.webmanifest",
     icons: {
       icon: [
-        { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-        { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+        { url: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+        { url: "/brand/logo-mark-official.svg", sizes: "any", type: "image/svg+xml" },
       ],
-      apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+      shortcut: [{ url: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
     },
     other: {
       "mobile-web-app-capable": "yes",
