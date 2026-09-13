@@ -1,58 +1,98 @@
 type Messages = Record<string, unknown>;
 
+const BRAND_TITLE = "Uzman Diyetisyen & Psikolog";
+const BRAND_CLINIC = "Gözde Akın Özel Klinik";
+const BRAND_FULL = `${BRAND_TITLE} • ${BRAND_CLINIC}`;
+
 const overrides: Record<string, Messages> = {
   tr: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "Kadıköy'deki özel klinikte veya online görüşme için randevu alın." },
-    footer: { descriptionLine3: "Özel Klinik • Kadıköy / İstanbul" },
-    site: { imageAlt: "Uzman Diyetisyen & Psikolog Gözde Akın — Özel Klinik" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "Kadıköy / İstanbul"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "Özel klinik randevusu ve bilgi için bize ulaşın",
-      mapTitle: "Gözde Akın Özel Klinik — Kadıköy / İstanbul"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   },
   en: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "Book an appointment at the private clinic in Kadıköy or online." },
-    footer: { descriptionLine3: "Private Clinic • Kadıköy / Istanbul" },
-    site: { imageAlt: "Expert Dietitian & Psychologist Gözde Akın — Private Clinic" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "Kadıköy / Istanbul"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "Contact us for private-clinic appointments and information",
-      mapTitle: "Gözde Akın Private Clinic — Kadıköy / Istanbul"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   },
   de: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "Vereinbaren Sie einen Termin in der Privatklinik in Kadıköy oder online." },
-    footer: { descriptionLine3: "Privatklinik • Kadıköy / Istanbul" },
-    site: { imageAlt: "Gözde Akın — Ernährungsberaterin & Psychologin, Privatklinik" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "Kadıköy / Istanbul"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "Kontakt für Termine in der Privatklinik und weitere Informationen",
-      mapTitle: "Gözde Akın Privatklinik — Kadıköy / Istanbul"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   },
   fr: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "Prenez rendez-vous à la clinique privée de Kadıköy ou en ligne." },
-    footer: { descriptionLine3: "Clinique privée • Kadıköy / Istanbul" },
-    site: { imageAlt: "Gözde Akın — Diététicienne experte & Psychologue, clinique privée" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "Kadıköy / Istanbul"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "Contactez-nous pour un rendez-vous à la clinique privée ou pour toute information",
-      mapTitle: "Clinique privée Gözde Akın — Kadıköy / Istanbul"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   },
   ru: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "Запишитесь на приём в частную клинику в Кадыкёе или онлайн." },
-    footer: { descriptionLine3: "Частная клиника • Кадыкёй / Стамбул" },
-    site: { imageAlt: "Гёзде Акын — диетолог и психолог, частная клиника" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "Кадыкёй / Стамбул"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "Свяжитесь с нами для записи в частную клинику и получения информации",
-      mapTitle: "Частная клиника Gözde Akın — Кадыкёй / Стамбул"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   },
   ar: {
+    hero: { badge: BRAND_FULL },
+    about: { hospital: BRAND_FULL },
     cta: { subtitle: "احجز موعداً في العيادة الخاصة في كاديكوي أو عبر الإنترنت." },
-    footer: { descriptionLine3: "عيادة خاصة • كاديكوي / إسطنبول" },
-    site: { imageAlt: "غوزده أكين — أخصائية تغذية وخبيرة نفسية، عيادة خاصة" },
+    footer: {
+      descriptionLine1: BRAND_TITLE,
+      descriptionLine2: BRAND_CLINIC,
+      descriptionLine3: "كاديكوي / إسطنبول"
+    },
+    site: { imageAlt: `${BRAND_TITLE} — ${BRAND_CLINIC}` },
     contact: {
       subtitle: "تواصلوا معنا لحجز موعد في العيادة الخاصة أو للحصول على معلومات",
-      mapTitle: "عيادة Gözde Akın الخاصة — كاديكوي / إسطنبول"
+      mapTitle: `${BRAND_TITLE} — ${BRAND_CLINIC}`
     }
   }
 };
