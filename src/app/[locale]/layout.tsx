@@ -1,4 +1,5 @@
 import type { Viewport } from "next";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -121,6 +122,17 @@ export default async function LocaleLayout({ children, params }: Props) {
           <PwaShell />
           <LegalShell />
         </NextIntlClientProvider>
+        <Script
+          id="sovra-ai-advisor-loader"
+          src="https://www.sovra.network/assets/sovra-advisor.js"
+          data-api="https://www.sovra.network/api/advisor"
+          data-site="Gözde Akın"
+          data-context="metadata"
+          data-side="left"
+          data-support="/en/iletisim"
+          data-privacy="https://www.sovra.network/advisor-privacy/"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
